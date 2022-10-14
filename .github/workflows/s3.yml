@@ -18,15 +18,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Yarn Install
-      run: |
-        yarn install
-    - name: Production Build
-      run: |
-        yarn build
-    - name: Unit Tests
-      run: |
-        yarn test
     - name: Deploy to S3
       uses: aws s3 sync * s3://sharjeel-s3
       with:
