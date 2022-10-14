@@ -20,8 +20,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to S3
       run: aws s3 sync * s3://sharjeel-s3
-      with:
-        args: --acl public-read --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
