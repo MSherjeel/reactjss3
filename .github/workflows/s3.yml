@@ -1,5 +1,5 @@
 name: "Upload Website"
-true: 
+on: 
   push: 
     branches: 
       - main
