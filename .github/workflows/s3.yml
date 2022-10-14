@@ -1,4 +1,4 @@
-name: Chat
+name: Production Build
 on:
   pull_request:
   push:
@@ -28,7 +28,7 @@ jobs:
       run: |
         yarn test
     - name: Deploy to S3
-      uses: jakejarvis/s3-sync-action@master
+      uses: aws s3 sync * s3://sharjeel-s3
       with:
         args: --acl public-read --delete
       env:
