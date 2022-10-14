@@ -26,4 +26,4 @@ jobs:
       - name: Build React App
         run: sudo npm cache clean -force && npm install -g npm
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync s3://sharjeel-s3
+        run: aws s3 cp /home/muhammad.sherjeel@ebryx.com/Desktop/github/reactjss3/README.md s3://sharjeel-s3
