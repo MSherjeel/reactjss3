@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Deploy to S3
-      uses: aws s3 sync * s3://sharjeel-s3
+      run: aws s3 sync * s3://sharjeel-s3
       with:
         args: --acl public-read --delete
       env:
